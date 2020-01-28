@@ -1,0 +1,26 @@
+{
+	"prefix": "bitlair/test/spacemap/",
+	"server": "mqtt.bitlair.nl",
+
+	"spaces": [
+		{
+			"topic": "bitlair",
+			"spacedirectory": "Bitlair"
+		},
+		{
+			"topic": "hackalot",
+			"spacedirectory": "Hackalot",
+			"mqtt": {
+				"host": "hackalot.nl",
+				"port": 1883,
+				"tls": false,
+				"topic": "hackalot/state",
+				"closed": "closed",
+				"open": "open"
+			}
+		},
+		{
+			"topic": "madspace"
+		},
+	]
+}
