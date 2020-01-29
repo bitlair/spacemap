@@ -64,7 +64,7 @@ class SpaceStateUpdater:
                 if 'state' in data and 'mqtt' in data['state']:
                     self.setup_mqtt(data['state']['mqtt'])
 
-            except Test:
+            except:
                 log("Unable to check spacestate for " + self.topic)
                 self.next_refresh = self.next_refresh + timedelta(seconds=self.error_initerval)
 
