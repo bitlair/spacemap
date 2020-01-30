@@ -59,7 +59,7 @@ class SpaceStateUpdater:
                 data = tools.get_json_data_from_url(self.url)
                 space = Space(data = data)
                 self.state = "open" if space.status.is_open else "closed"
-                self.next_refresh = self.next_refresh + timedelta(seconds=self.refresh_interval)
+                self.next_refresh = datetime.now() + timedelta(seconds=self.refresh_interval)
 
                 if 'state' in data and 'mqtt' in data['state']:
                     self.setup_mqtt(data['state']['mqtt'])
